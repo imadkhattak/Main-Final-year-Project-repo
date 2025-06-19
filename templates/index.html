@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peshawar Mall Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-content">
+                <h1>🛍️ Peshawar Mall Assistant</h1>
+                <p>Your voice-activated shopping companion</p>
+            </div>
+            <div class="header-animation"></div>
+        </div>
+
+        <div class="welcome-screen" id="welcome-screen">
+            <div class="welcome-content">
+                <div class="welcome-icon">
+                    <div class="icon-inner">🤖</div>
+                    <div class="icon-pulse"></div>
+                </div>
+                <div class="welcome-text">
+                    <h2>Welcome to Your AI Shopping Assistant</h2>
+                    <p>I'm here to help you navigate Peshawar Mall, find product prices, store locations, and contact information. Simply click to start our conversation!</p>
+                </div>
+                <button class="start-button" id="start-button">
+                    <span class="button-text">Start Conversation</span>
+                    <div class="button-shine"></div>
+                </button>
+            </div>
+        </div>
+
+        <div class="chat-area" id="chat-area">
+            <div class="chat-messages" id="chat-messages">
+                <!-- No typing indicator! -->
+            </div>
+            
+            <div class="voice-controls" id="voice-controls">
+                <div class="status-indicator" id="status-indicator">
+                    Ready to listen - Conversation active
+                </div>
+                
+                <div class="control-buttons">
+                    <button class="end-call-button" id="end-call-button" title="End conversation">
+                        <span class="end-call-text">Stop Conversation</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio element for playing TTS responses -->
+    <audio id="response-audio" preload="none"></audio>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
